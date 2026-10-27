@@ -7,8 +7,8 @@ if (!isset($_SESSION['id_akun'])) {
     exit;
 }
 
-if ($_SESSION['role'] !== 'admin') {
-    header("Location: ../owner/index.php");
+if ($_SESSION['role'] !== 'owner') {
+    header("Location: ../admin/index.php");
     exit;
 }
 ?>
@@ -59,7 +59,7 @@ if ($_SESSION['role'] !== 'admin') {
     <!-- Brand Logo / Identity -->
     <a href="index.php" class="sidebar-brand">
       <i class="bi bi-asterisk"></i>
-      <span>Admin</span>
+      <span>Owner</span>
     </a>
 
     <!-- Navigation Menu -->
